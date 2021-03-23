@@ -7,4 +7,12 @@ Funcionalidade: Validação de CPF
     Quando eu acesso o sistema de validacao de CPF
     E digito no campo nome "Danilo"
     E digito no campo cpf "571.663.770-11"
-    Entao eu devo ver a mensagem de sucesso "Foi validado com sucesso“
+    E clico no botao enviar
+    Entao eu devo ver a mensagem "Foi validado com sucesso"
+    
+  Cenario: Testando CPF invalido
+    Quando eu acesso o sistema de validacao de CPF
+    E digito no campo nome "Danilo"
+    E digito no campo cpf "571.663.770-12"
+    E clico no botao enviar
+    Entao eu devo ver a mensagem "Não validado com sucesso"
