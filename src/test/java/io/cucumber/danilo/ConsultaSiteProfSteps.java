@@ -14,7 +14,7 @@ public class ConsultaSiteProfSteps {
 
 	public WebDriver browser;
 
-	public void EntrarSite() {
+	public ConsultaSiteProfSteps() {
 		System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
 		browser = new ChromeDriver();
 	}
@@ -34,7 +34,7 @@ public class ConsultaSiteProfSteps {
 	@Então("devo ver o resultado na busca")
 	public void devo_ver_o_resultado_na_busca(String string) {
 		WebElement input = browser.findElement(By.cssSelector("[div-col-h1]"));
-		assertEquals(true, "div-col-h1" > 0);
+		assertEquals(true, ("div-col-h1")).size() > 0);
 		browser.quit();
 	}
 
